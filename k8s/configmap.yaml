@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kubeforge-config
+  namespace: kubeforge
+data:
+  APP_NAME: "KubeForge"
+  APP_ENV: "production"

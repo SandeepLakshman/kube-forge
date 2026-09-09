@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "helm-kubeforge.fullname" . }}
+  labels:
+    {{- include "helm-kubeforge.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "helm-kubeforge.selectorLabels" . | nindent 4 }}
