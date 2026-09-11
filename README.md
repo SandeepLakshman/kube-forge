@@ -36,3 +36,9 @@ The application exposes:
 ```bash
 kubectl apply -f k8s/
 
+## Hands-on Activity
+
+- Deployed KubeForge using Kubernetes Deployment
+- Configured 3 replicas and scaled the application
+- Performed rolling update and rollback
+- Exposed the application using a Kubernetes Service
